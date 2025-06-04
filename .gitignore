@@ -1,0 +1,55 @@
+## Project specific files
+rust/double-auction/target
+rust/target/
+contract-java-test/target
+*.pk
+*.lock
+__pycache__
+*.jqwik-database
+
+# Ignore mac files
+.DS_Store
+
+# Ignore build directory
+out/*
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.lol
+
+## Intermediate documents:
+*.dvi
+*-converted-to.*
+# these rules might exclude image files for figures etc.
+*.ps
+# *.eps
+# *.pdf
+thesis.pdf
+
+## Bibliography auxiliary files (bibtex/biblatex/biber):
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.brf
+*.run.xml
+
+## Build tool auxiliary files:
+*.fdb_latexmk
+*.synctex
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+*.ist

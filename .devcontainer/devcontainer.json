@@ -1,0 +1,17 @@
+{
+	"name": "Rust, Java 7 and Python Dev Container",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"features": {
+		"ghcr.io/devcontainers/features/rust:1": {},
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "17.0.14"
+		},
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers-extra/features/maven-sdkman:2": {}
+	},
+	"postCreateCommand": [
+		"rustc --version",
+		"java -version",
+		"python3 --version"
+	]
+}
