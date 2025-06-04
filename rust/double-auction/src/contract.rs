@@ -47,7 +47,7 @@ pub struct Order {
 }
 
 #[state]
-struct ContractState {
+pub struct ContractState {
     pub auction_holder: Address,
     pub prices: [i16; 6],
     pub market_clearing_price_index: Option<i16>,
@@ -59,7 +59,7 @@ struct ContractState {
 }
 
 #[init]
-fn initialize(
+pub fn initialize(
     ctx: ContractContext
 ) -> ContractState {
     ContractState {
@@ -75,7 +75,7 @@ fn initialize(
 }
 
 #[action(shortname = 0x00)]
-fn reset_contract(
+pub fn reset_contract(
     ctx: ContractContext,
     state: ContractState,
 ) -> (ContractState, Vec<EventGroup>) {
@@ -99,7 +99,7 @@ fn reset_contract(
 }
 
 #[action(shortname = 0x47)]
-fn update_prices (
+pub fn update_prices (
     ctx: ContractContext, 
     mut state: ContractState,
     min: i16,
@@ -117,7 +117,7 @@ fn update_prices (
 }
 
 #[action(shortname = 0x40)]
-fn input_buy_order(
+pub fn input_buy_order(
     _ctx: ContractContext,
     mut state: ContractState,
     buy_order: OrderInput,
@@ -130,7 +130,7 @@ fn input_buy_order(
 }
 
 #[action(shortname = 0x45)]
-fn input_sell_order(
+pub fn input_sell_order(
     _ctx: ContractContext,
     mut state: ContractState,
     sell_order: OrderInput,
@@ -143,7 +143,7 @@ fn input_sell_order(
 }
 
 #[action(shortname = 0x02)]
-fn hold_double_auction(
+pub fn hold_double_auction(
     ctx: ContractContext,
     state: ContractState,
 ) -> (ContractState, Vec<EventGroup>) {
@@ -156,7 +156,6 @@ fn hold_double_auction(
     )
 }
 
-#[action]
 fn save_opened_variable(
     _ctx: ContractContext,
     mut state: ContractState,
@@ -216,6 +215,7 @@ fn save_opened_variable(
         vec![]
     )
 }
+
 fn aggregate_sell_orders(
     sell_order_inputs: &Vec<OrderInput>,
 ) -> Vec<OrderInput> {

@@ -50,7 +50,7 @@ run the folder with the included `.devcontainer`.
 Next, install the toolchain:
 ```bash
 rustup install stable
-rustup default stable
+rustup default 1.86 
 ```
 As well as the `wasm32-unknown-unknown` target:
 ```bash
@@ -79,14 +79,6 @@ The smart contract test suite can be run by the following script:
 ```bash
 cd contract-java-test 
 mvn test
-```
-
-### Property Based Testing
-
-To run the property based tests, run the following command:
-
-```bash
-mvn test -Dtest=OptimizedZkDoubleAuctionPropertyBasedTesting
 ```
 
 ### Testing on the Partisia Blockchain Testnet
