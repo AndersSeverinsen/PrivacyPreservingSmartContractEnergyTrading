@@ -15,9 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-
-
-
 public final class ComplexityTool extends JunitContractTest{
 
     private static final int BUYERS = 10;
@@ -84,15 +81,7 @@ public final class ComplexityTool extends JunitContractTest{
         
         System.out.println("number of multiplications " + zkNodes.getComplexityOfLastComputation().multiplicationCount());
         System.out.println("number of rounds " + zkNodes.getComplexityOfLastComputation().numberOfRounds());
-
     }
-
-
-
-
-
-
-
 
     private record Order(int houseId, List<Integer> prices){ }
 
@@ -115,6 +104,5 @@ public final class ComplexityTool extends JunitContractTest{
 
     byte[] secretInputSellingRpc() {
         return new byte[] {0x45};
-    }
-            
+    }  
 }

@@ -11,7 +11,7 @@ Smart Contracts are written in the [Rust programming
 language](https://rust-lang.org/), using the [Paritisa Blockchain Contract
 SDK](https://gitlab.com/partisiablockchain/language/contract-sdk/). Tests of contract
 functionality is written in Java, and uses the
-[Junit contract testing framework](https://gitlab.com/partisiablockchain/language/junit-contract-test/).
+[JUnit contract testing framework](https://gitlab.com/partisiablockchain/language/junit-contract-test/).
 
 ## Contracts Overview
 
@@ -94,4 +94,14 @@ Run the script with the following command, to test the `optimized-zk-double-auct
 ```bash
 cd scripts 
 python3 testnet-optimized-zk-double-auction.py
+```
+
+### Complexity testing
+
+`ComplexityTool.java` uses the Partisia Blockchain Complexity Tool to get the number of multiplications and
+rounds, done by the ZK nodes. It can be run with the following command:
+
+```bash
+cd contract-java-test 
+mvn test -Dtest=ComplexityTool
 ```
