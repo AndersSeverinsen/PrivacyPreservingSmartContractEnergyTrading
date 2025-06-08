@@ -87,9 +87,9 @@ To test the contracts on the Partisia Blockchain Testnet, we have created a Pyth
 compiled contracts to the testnet and adds random transactions to the contract, before holding the double
 auction.
 
-The script can be found in the `scripts` directory. To run the script, you need to have Python 3.x installed.
+The script can be found in the [`scripts`](./scripts/) directory. To run the script, you need to have Python 3.x installed.
 
-Run the script with the following command, to test the `optimized-zk-double-auction` contract:
+Run the script with the following command, to test the [`optimized-zk-double-auction`](./scripts/testnet-optimized-zk-double-auction.py) contract:
 
 ```bash
 cd scripts 
@@ -98,7 +98,7 @@ python3 testnet-optimized-zk-double-auction.py
 
 ### Complexity testing
 
-`ComplexityTool.java` uses the Partisia Blockchain Complexity Tool to get the number of multiplications and
+[`ComplexityTool.java`](./contract-java-test/src/test/java/examples/ComplexityTool.java) uses the Partisia Blockchain Complexity Tool to get the number of multiplications and
 rounds, done by the ZK nodes. It can be run with the following command:
 
 ```bash
