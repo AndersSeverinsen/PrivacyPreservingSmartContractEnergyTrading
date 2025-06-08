@@ -45,7 +45,7 @@ The **ZK (Multi-Party Computation)** contracts are:
 All smart contracts can be compiled using the [Cargo Partisia Contract](https://gitlab.com/partisiablockchain/language/cargo-partisia-contract) tool:
 
 First, ensure you have the `Rust`, `Java`, `Python` and `Maven` installed on your machine, or
-run the folder with the included `.devcontainer`.
+run the folder with the included [`devcontainer.json`](./.devcontainer/devcontainer.json).
 
 Next, install the toolchain:
 ```bash
@@ -81,6 +81,16 @@ cd contract-java-test
 mvn test
 ```
 
+### Complexity testing
+
+[`ComplexityTool.java`](./contract-java-test/src/test/java/examples/ComplexityTool.java) uses the Partisia Blockchain Complexity Tool to get the number of multiplications and
+rounds, done by the ZK nodes. It can be run with the following command:
+
+```bash
+cd contract-java-test 
+mvn test -Dtest=ComplexityTool
+```
+
 ### Testing on the Partisia Blockchain Testnet
 
 To test the contracts on the Partisia Blockchain Testnet, we have created a Python script that uploads the
@@ -94,14 +104,4 @@ Run the script with the following command, to test the [`optimized-zk-double-auc
 ```bash
 cd scripts 
 python3 testnet-optimized-zk-double-auction.py
-```
-
-### Complexity testing
-
-[`ComplexityTool.java`](./contract-java-test/src/test/java/examples/ComplexityTool.java) uses the Partisia Blockchain Complexity Tool to get the number of multiplications and
-rounds, done by the ZK nodes. It can be run with the following command:
-
-```bash
-cd contract-java-test 
-mvn test -Dtest=ComplexityTool
 ```
